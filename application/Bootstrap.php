@@ -23,7 +23,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                 'Time',
                 'Registry',
                 'Exception'),
-            'jquery_path'       => '/js/jquery-2.1.3.min.js',
+            'jquery_path'       => 'assets/js/jquery-2.1.3.min.js',
         );
 
         # Instantiate the database adapter and setup the plugin.
