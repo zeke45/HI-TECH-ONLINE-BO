@@ -15,6 +15,15 @@ production:
     modules:
     layout:
       layoutPath: APPLICATION_PATH/modules/core/layouts/scripts/
+    db:
+        adapter: "PDO_MYSQL"
+        params:
+             charset: "UTF8"
+             host: "localhost"
+             username: "root"
+             password: ""
+             dbname: "hitech"
+        isDefaultTableAdapter: true
 staging:
   _extends: production
 

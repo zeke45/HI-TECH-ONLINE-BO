@@ -1,3 +1,12 @@
 body{
     background-color: white;
 }
+
+ul,li{
+     list-style-type: none;
+     display: inline-block;
+}
+
+textarea{
+    resize: none;
+}

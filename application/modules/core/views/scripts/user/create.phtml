@@ -1,4 +1,60 @@
-
 <h1 class="page-header">
-    Creation d'un utilisateurs
+    Création d'un utilisateurs
 </h1>
+<form action="<?php echo $this->url(array('controller' => 'user', 'action' => 'index' ,'type' => 'signin'),null,true); ?>" method="POST">
+    <div class="col-md-7">
+        <ul>
+            <li class="form-group col-md-12">
+                Nom de compte :
+                <input type="text" class="pull-right col-md-7 name="pseudonyme"/>
+            </li>
+            <li class="form-group col-md-12">
+                Adresse mail :
+                <input type="text" class="pull-right col-md-7 name="email"/>
+            </li>
+            <li class="form-group col-md-12">
+                Nom :
+                <input type="text" class="pull-right col-md-7 name="nom"/>
+            </li>  
+            <li class="form-group col-md-12">
+                Prenom :
+                <input type="text" class="pull-right col-md-7" name="prenom"/>
+            </li> 
+            <li class="form-group col-md-12">
+                Adresse :
+                <textarea class="pull-right col-md-7" name="adresse"></textarea>
+            </li>
+            <li class="form-group col-md-12">
+                Code Postal :
+                <input type="text" class="pull-right col-md-7" name="codePostal"/>
+            </li>
+            <li class="form-group col-md-12">
+                Ville :
+                <input type="text" class="pull-right col-md-7" name="ville"/>
+            </li>
+            <li class="form-group col-md-12">
+                Pays :
+                <input type="text" class="pull-right col-md-7" name="pays"/>
+            </li>   
+            <li class="form-group col-md-12">
+                Mot de passe :
+                <input type="password" class="pull-right col-md-7" name="password"/>
+            </li>
+            <li class="form-group col-md-12">
+                Confirmation:
+                <input type="password" class="pull-right col-md-7" name="confirmation"/>
+            </li>
+            <li class="col-md-offset-5 col-md-7">
+                <div>
+                    <input type="checkbox" name="newsletter"/> Newsletter?
+                </div>
+                <div>
+                    <input type="checkbox" name="admin"/> Admin?
+                </div>
+            </li>
+            <li class="form-group col-md-12">
+                <input type="submit" class="pull-right col-md-3"/>
+            </li>
+        </ul>
+    </div>
+</form>
