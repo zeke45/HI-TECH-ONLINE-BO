@@ -13,7 +13,7 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
         
         return $row;
     }
-    
+            
     public function inscription($login, $mdp, $firstname, $lastname, $mail, $phone, $address, $codePostal, $pays, $newsletter, $admin) {
         try {                       
             $data = array(
@@ -33,16 +33,14 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
         } 
         catch (Exception $ex) {
             echo $ex->getMessage();
-        }
-        
+        }        
     }
     
     public function loginExist($login) {
-        try {
-            
+        try {  
             $select = $this->select()
                     ->setIntegrityCheck(false)
-                    ->from(array('u' => DB_TABLE_USER))   
+                    ->from(array('u' => $_name))   
                     ->where('u.pseudonyme = ?', $login);
             $row = $this->fetchAll($select)->toArray();
             $this->data = $row[0];      
@@ -51,7 +49,6 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
         } 
         catch (Exception $ex) {
             echo $ex->getMessage();
-         
         }
         
     }

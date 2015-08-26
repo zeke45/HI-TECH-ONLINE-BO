@@ -1,20 +1,20 @@
 <h1 class="page-header">
     Création d'un utilisateurs
 </h1>
-<form action="<?php echo $this->url(array('controller' => 'user', 'action' => 'index' ,'type' => 'signin'),null,true); ?>" method="POST">
+<form action="<?php echo $this->url(array('controller' => 'user', 'action' => 'index' ,'type' => 'signup'),null,true); ?>" method="POST">
     <div class="col-md-7">
         <ul>
             <li class="form-group col-md-12">
                 Nom de compte :
-                <input type="text" class="pull-right col-md-7 name="pseudonyme"/>
+                <input type="text" class="pull-right col-md-7" name="pseudonyme" />
             </li>
             <li class="form-group col-md-12">
                 Adresse mail :
-                <input type="text" class="pull-right col-md-7 name="email"/>
+                <input type="text" class="pull-right col-md-7" name="email"/>
             </li>
             <li class="form-group col-md-12">
                 Nom :
-                <input type="text" class="pull-right col-md-7 name="nom"/>
+                <input type="text" class="pull-right col-md-7" name="nom"/>
             </li>  
             <li class="form-group col-md-12">
                 Prenom :
@@ -40,10 +40,10 @@
                 Mot de passe :
                 <input type="password" class="pull-right col-md-7" name="password"/>
             </li>
-            <li class="form-group col-md-12">
+            <!--<li class="form-group col-md-12">
                 Confirmation:
                 <input type="password" class="pull-right col-md-7" name="confirmation"/>
-            </li>
+            </li>-->
             <li class="col-md-offset-5 col-md-7">
                 <div>
                     <input type="checkbox" name="newsletter"/> Newsletter?
