@@ -1,1 +1,34 @@
+<h1 class="page-header">
+    Création d'une sous-catégorie
+</h1>
+<form action="<?php echo $this->url(array('controller' => 'subcategory', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="POST">
+    <div class="col-md-7">
+        <li class="form-group col-md-12">
+            Nom de la sous-catégorie :
+            <input type="text" class="pull-right col-md-7" name="nomCategorie" />
+        </li>
 
+        <li class="form-group col-md-12">
+            Description de la sous-catégorie :
+            <textarea class="pull-right col-md-7" name="description"></textarea>
+        </li>
+        <li class="form-group col-md-12">
+            Catégorie Parente :
+            <select class="pull-right col-md-7 " name="categorie_id">
+                <option>-- Choisissez une catégorie --</option>
+                <?php 
+                    $categories = new Core_Model_Category();
+
+                    foreach($categories->indexCategories() as $category){
+                        echo "<option value=".$category['id'].">".$category['nomCategorie']."</option>";
+                    }
+                ?>
+            </input>
+        </li>
+
+        <li class="form-group col-md-12 submit">
+            <input type="submit" class="pull-right col-md-4"/>
+        </li>
+        
+    </div>
+</form>

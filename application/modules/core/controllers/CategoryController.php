@@ -45,6 +45,7 @@ class CategoryController extends Zend_Controller_Action
             $nomCategorie = $_POST['nomCategorie'];
             $description = $_POST['description'];
             
+            
             $stat = $user->ajoutCategorie($nomCategorie, $description);
             $this->_redirect($this->view->url(array('controller' => 'category', 'action' => 'index'), null, true));
 
