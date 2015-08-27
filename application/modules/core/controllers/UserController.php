@@ -9,6 +9,7 @@ class UserController extends Zend_Controller_Action
     }
 
     public function indexAction()
+<<<<<<< HEAD
     {
         $table = new Core_Model_User();
         
@@ -41,11 +42,14 @@ class UserController extends Zend_Controller_Action
         
         /*Appeler lors de l'inscription par le backoffice*/
         
+=======
+    {                     
+>>>>>>> origin/master
         if ($this->_getParam('type') == 'signup') {
             $user = new Core_Model_User();
 
             $login = $_POST['pseudonyme'];
-            $mdp = $_POST['password'];
+            $password = $_POST['password'];
             $firstname = $_POST['prenom'];
             $lastname = $_POST['nom'];
             $mail = $_POST['email'];
@@ -75,13 +79,21 @@ class UserController extends Zend_Controller_Action
             {
                 $this->_redirect($this->view->url(array('controller' => 'user', 'action' => 'index','login'=>false), null, true));
             }
+<<<<<<< HEAD
             $stat = $user->inscription($login, $mdp, $firstname, $lastname, $mail, $phone, $address, $ville, $codePostal, $pays, $newsletter, $admin);
             $this->_redirect($this->view->url(array('controller' => 'user', 'action' => 'index'), null, true));
 
+=======
+            
+            $stat = $user->inscription($login, $password, $firstname, 
+                    $lastname, $mail, $phone, $address, $codePostal,
+                    $pays, $newsletter, $admin);
+            $this->_redirect($this->view->url(array('controller' => 'index', 'action' => 'index'), null, true));
+>>>>>>> origin/master
             if ($stat != -1) {
-                echo "vous êtes inscrit";
+                echo "Inscription complête";
             } else {
-                echo "erreur lors de l'enregistrement";
+                echo "Un problème a surgit lors de l'inscription";
             }
             
             

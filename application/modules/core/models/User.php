@@ -5,17 +5,36 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
     /*protected $_dbname = DB_NAME_HITECH;
     public $data = array();     */
     
+    protected $_schema = 'hitech';
     protected $_name = "utilisateurs";
     
+<<<<<<< HEAD
     public function indexUsers(){
+=======
+    public function indexUsers($id){
+>>>>>>> origin/master
         $select = $this->select();
         $row = $this->fetchAll($select)->toArray();
         
         return $row;
     }
+    
+    public function showUser($id){
+        $select = $this->select()
+                        ->where("id", $value);
+        
+        $row = $this->fetch($select);
+        
+        return $row;
+    }
             
+<<<<<<< HEAD
     public function inscription($login, $password, $firstname, $lastname, $mail, $phone, $address, $ville, $codePostal, $pays, $newsletter, $admin) {
         try {                       
+=======
+    public function inscription($login, $password, $firstname, $lastname, $mail, $phone, $address, $codePostal, $pays, $newsletter, $admin) {
+        try { 
+>>>>>>> origin/master
             $data = array(
                 'pseudonyme' => $login,
                 'password' => $password,
@@ -40,8 +59,7 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
     public function loginExist($login) {
         try {  
             $select = $this->select()
-                    ->setIntegrityCheck(false)
-                    ->from(array('u' => $_name))   
+                    ->from(array('utilisateurs' => $_name))   
                     ->where('u.pseudonyme = ?', $login);
             $row = $this->fetchAll($select)->toArray();
             $this->data = $row[0];      
