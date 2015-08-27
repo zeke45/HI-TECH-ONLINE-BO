@@ -7,22 +7,23 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
     
     protected $_name = "utilisateurs";
     
-    public function show($id){
+    public function indexUsers(){
         $select = $this->select();
         $row = $this->fetchAll($select)->toArray();
         
         return $row;
     }
             
-    public function inscription($login, $mdp, $firstname, $lastname, $mail, $phone, $address, $codePostal, $pays, $newsletter, $admin) {
+    public function inscription($login, $password, $firstname, $lastname, $mail, $phone, $address, $ville, $codePostal, $pays, $newsletter, $admin) {
         try {                       
             $data = array(
                 'pseudonyme' => $login,
                 'password' => $password,
                 'nom' => $lastname,
                 'prenom' => $firstname,
-                'mail' => $mail,
+                'email' => $mail,
                 'adresse' => $address,
+                'ville' => $ville,
                 'codePostal' => $codePostal,
                 'pays' => $pays,
                 'newsletter' => $newsletter,
