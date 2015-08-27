@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/views/scripts/user/show.phtml</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/views/scripts/user/create.phtml</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/views/scripts/product/show.phtml</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/controllers/UserController.php</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/views/scripts/user/index.phtml</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/models/User.php</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/controllers/IndexController.php</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/views/scripts/product/index.phtml</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/views/scripts/product/create.phtml</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/controllers/CategoryController.php</file>
+            <file>file:/C:/wamp/www/HI-TECH-ONLINE-BO/application/modules/core/controllers/ProductController.php</file>
+        </group>
     </open-files>
 </project-private>

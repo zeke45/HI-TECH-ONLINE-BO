@@ -1,3 +1,26 @@
 <h1 class="page-header">
     Creation d'un produit
 </h1>
+<form action="<?php echo $this->url(array('controller' => 'product', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="get">
+    <div class="col-md-7">
+        <ul>
+            
+            <li class="form-group col-md-12">
+                Nom du produit :
+                <input type="text" class="pull-right col-md-7" name="nomProduit" />
+            </li>
+            
+            <li class="form-group col-md-12">
+                Catégorie :
+                <input type="select" class="pull-right col-md-7" name="categorie" />
+                    <?php echo $this->url(array('controller' => 'categorie', 'action' => 'listSelect'), null, true); ?>
+                <input>
+            </li>
+           
+            <li class="form-group col-md-12">
+                <input type="submit" class="pull-right col-md-3"/>
+            </li>
+            
+        </ul>
+    </div>
+</form>
