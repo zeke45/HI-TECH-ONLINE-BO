@@ -120,19 +120,27 @@
                 <a href="<?php echo $this->url(array('controller' => 'user', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-users"></i> Utilisateurs</a>
             </li>
             <li>
-                <a href="<?php echo $this->url(array('controller' => 'product', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-cubes"></i>Produits</a>
+                <a href="<?php echo $this->url(array('controller' => 'product', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-cubes"></i> Produits</a>
             </li>
             <li>
-                <a href="<?php echo $this->url(array('controller' => 'category', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-database"></i>Categories</a>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-database"></i> Arborescense <i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="demo" class="collapse">
+                        <li class="col-md-12 row">
+                            <a href="<?php echo $this->url(array('controller' => 'category', 'action' => 'index'), null, false); ?>" class="col-md-12"></i> Categories</a>
+                        </li>
+                        <li class="col-md-12 row">
+                            <a href="<?php echo $this->url(array('controller' => 'subcategory', 'action' => 'index'), null, false); ?>" class="col-md-12"></i> Sous-Categories</a>
+                        </li>
+                    </ul>
             </li>
             <li>
-                <a href="<?php echo $this->url(array('controller' => 'event', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-calendar"></i>Sessions de vente</a>
+                <a href="<?php echo $this->url(array('controller' => 'event', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-calendar"></i> Sessions de vente</a>
             </li>
             <li>
-                <a href="<?php echo $this->url(array('controller' => 'cart', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-shopping-cart"></i>Paiements</a>
+                <a href="<?php echo $this->url(array('controller' => 'cart', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-shopping-cart"></i> Paiements</a>
             </li>
             <li>
-                <a href="<?php echo $this->url(array('controller' => 'credential', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-edit"></i>Roles & Droits</a>
+                <a href="<?php echo $this->url(array('controller' => 'credential', 'action' => 'index'), null, false); ?>"><i class="fa fa-fw fa-edit"></i> Roles & Droits</a>
             </li>
         </ul>
     </div>

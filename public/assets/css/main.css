@@ -10,3 +10,7 @@ ul,li{
 textarea{
     resize: none;
 }
+
+input[type=submit]{
+    margin-top: 20px;
+}

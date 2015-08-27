@@ -47,7 +47,7 @@ class ProductController extends Zend_Controller_Action
             $categorie = $_POST['idProduitCategorie'];
 
             
-            $stat = $user->inscription($login, $mdp, $firstname, $lastname, $mail, $phone, $address, $ville, $codePostal, $pays, $newsletter, $admin);
+            $stat = $user->ajoutProduit($nomProduit, $prixUnitaire, $stock, $codeProduit, $categorie);
             $this->_redirect($this->view->url(array('controller' => 'product', 'action' => 'index'), null, true));
 
             if ($stat != -1) {
@@ -55,6 +55,7 @@ class ProductController extends Zend_Controller_Action
             } else {
                 echo "Erreur lors de l'ajout de produit";
             }
+            
         }
     }
     
@@ -65,7 +66,7 @@ class ProductController extends Zend_Controller_Action
 
     public function createAction()
     {
-        
+         
     }
 
 }

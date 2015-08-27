@@ -1,16 +1,29 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Category
- *
- * @author Vince
- */
-class Category {
+class Core_Model_Category extends Zend_Db_Table_Abstract
+{
+    protected $_name = "categories";
+    
+    public function indexCategories()
+    {
+        $select = $this->select();
+        $row = $this->fetchAll($select)->toArray();
+        
+        return $row;
+    }
+    public function ajoutCategorie($nomCategorie, $description)
+    {
+        try {                       
+            $data = array(
+                'nomCategorie' => $nomCategorie,
+                'description' => $description
+            );
+            return $this->insert($data);    
+        } 
+        catch (Exception $ex) {
+            echo $ex->getMessage();
+        }        
+    }
+    
     //put your code here
 }

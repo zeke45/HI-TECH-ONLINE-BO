@@ -1,24 +1,47 @@
 <h1 class="page-header">
     Creation d'un produit
 </h1>
-<form action="<?php echo $this->url(array('controller' => 'product', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="get">
+<form action="<?php echo $this->url(array('controller' => 'product', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="POST">
     <div class="col-md-7">
         <ul>
             
             <li class="form-group col-md-12">
                 Nom du produit :
-                <input type="text" class="pull-right col-md-7" name="nomProduit" />
+                <input type="text" class="pull-right col-md-7" name="nom" />
+            </li>
+
+            <li class="form-group col-md-12">
+                Prix :
+                <input type="text" class="pull-right col-md-7" name="prixUnitaire" />
+            </li>
+            
+            <li class="form-group col-md-12">
+                Stock déjà disponible :
+                <input type="text" class="pull-right col-md-7" name="stock" />
+            </li>
+            
+            <li class="form-group col-md-12">
+                Code Générique du produit :
+                <input type="text" class="pull-right col-md-7" name="codeProduitGenerique" />
             </li>
             
             <li class="form-group col-md-12">
                 Catégorie :
-                <input type="select" class="pull-right col-md-7" name="categorie" />
-                    <?php echo $this->url(array('controller' => 'categorie', 'action' => 'listSelect'), null, true); ?>
-                <input>
+                <select class="pull-right col-md-7 " name="idProduitCategorie">
+                    <option>-- Choisissez une catégorie --</option>
+                    <?php 
+                        $categories = new Core_Model_Category();
+         
+                        foreach($categories->indexCategories() as $category){
+                            echo "<option value=".$category['id'].">".$category['nomCategorie']."</option>";
+                        }
+                    ?>
+                </input>
             </li>
+            
            
-            <li class="form-group col-md-12">
-                <input type="submit" class="pull-right col-md-3"/>
+            <li class="form-group col-md-12 submit">
+                <input type="submit" class="pull-right col-md-4"/>
             </li>
             
         </ul>

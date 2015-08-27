@@ -1,8 +1,24 @@
-<?php
+<h1 class="page-header">
+    Creation d'une categorie
+</h1>
+<form action="<?php echo $this->url(array('controller' => 'category', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="POST">
+    <div class="col-md-7">
+        <ul>
+            
+            <li class="form-group col-md-12">
+                Nom de la catégorie :
+                <input type="text" class="pull-right col-md-7" name="nomCategorie" />
+            </li>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+            <li class="form-group col-md-12">
+                Description de la catégorie :
+                <textarea class="pull-right col-md-7" name="description"></textarea>
+            </li>
+            
+            <li class="form-group col-md-12 submit">
+                <input type="submit" class="pull-right col-md-4"/>
+            </li>
+            
+        </ul>
+    </div>
+</form>

@@ -10,5 +10,22 @@ class Core_Model_Product extends Zend_Db_Table_Abstract {
         
         return $row;
     }
+    
+    public function ajoutProduit($nomProduit, $prixUnitaire, $stock, $codeProduit, $categorie)
+    {
+        try {                       
+            $data = array(
+                'nom' => $nomProduit,
+                'prixUnitaire' => $prixUnitaire,
+                'stock' => $stock,
+                'codeProduitGenerique' => $codeProduit,
+                'idProduitCategorie' => $categorie,
+            );
+            return $this->insert($data);    
+        } 
+        catch (Exception $ex) {
+            echo $ex->getMessage();
+        }        
+    }
 
 }
