@@ -1,0 +1,117 @@
+<h1 class="page-header">
+    Creation d'un Evenement
+</h1>
+
+<form action="<?php echo $this->url(array('controller' => 'event', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="POST">
+    <div class="col-md-7">
+        <ul>
+            
+            <li class="form-group col-md-12">
+                Libelle de l'evenement :
+                <input type="text" class="pull-right col-md-7" name="libelle" />
+            </li>
+
+            <li class="form-group col-md-12">
+                Date de debut:
+                <select class="pull-right col-md-2" name="anneeDebut">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 2015; $i <= 2050; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+                <select class="pull-right col-md-2" name="moisDebut">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 1; $i <= 12; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+                <select class="pull-right col-md-2" name="jourDebut">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 1; $i <= 31; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+            </li>
+            <li class="form-group col-md-12">
+                Heure de debut:
+                <select class="pull-right col-md-2" name="minuteDebut">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 0; $i <= 59; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+                <select class="pull-right col-md-2" name="heureDebut">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 0; $i <= 23; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>   
+            </li>
+            <li class="form-group col-md-12">
+                Date de fin:
+                <select class="pull-right col-md-2" name="anneeFin">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 2015; $i <= 2050; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+                <select class="pull-right col-md-2" name="moisFin">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 1; $i <= 12; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+                <select class="pull-right col-md-2" name="jourFin">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 1; $i <= 31; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>     
+            </li>
+            <li class="form-group col-md-12">
+                Heure de debut:
+                <select class="pull-right col-md-2" name="minuteFin">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 0; $i <= 59; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>
+                <select class="pull-right col-md-2" name="heureFin">
+                    <option>- -</option>
+                    <?php 
+                        for ($i = 0; $i <= 23; $i++) {
+                            echo "<option value=".$i.">".$i."</option>";
+                        }
+                    ?>
+                </select>   
+            </li>
+
+            
+              
+           
+            <li class="form-group col-md-12 submit">
+                <input type="submit" class="pull-right col-md-4"/>
+            </li>
+            
+        </ul>
+    </div>
+</form>
+    

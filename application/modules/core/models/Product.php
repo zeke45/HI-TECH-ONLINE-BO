@@ -27,5 +27,17 @@ class Core_Model_Product extends Zend_Db_Table_Abstract {
             echo $ex->getMessage();
         }        
     }
+    
+    public function deleteProduct($id) {
 
+        try {
+            $nbRowsDeleted = $this->delete('id = ' . $id);
+        } catch (Exception $ex) {
+
+            echo 'ERROR_DELETE_DELETEARTICLE : ' . $ex->getMessage();
+            return false;
+        }
+
+        return $nbRowsDeleted;
+    }
 }

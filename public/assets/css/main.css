@@ -14,3 +14,13 @@ textarea{
 input[type=submit]{
     margin-top: 20px;
 }
+
+
+.fa-check{
+    color: green;
+}
+
+
+.fa-remove{
+    color: red;
+}

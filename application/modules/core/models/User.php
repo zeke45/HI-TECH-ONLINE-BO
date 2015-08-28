@@ -8,11 +8,9 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
     protected $_schema = 'hitech';
     protected $_name = "utilisateurs";
     
-<<<<<<< HEAD
+
     public function indexUsers(){
-=======
-    public function indexUsers($id){
->>>>>>> origin/master
+
         $select = $this->select();
         $row = $this->fetchAll($select)->toArray();
         
@@ -28,13 +26,9 @@ class Core_Model_User extends Zend_Db_Table_Abstract {
         return $row;
     }
             
-<<<<<<< HEAD
+
     public function inscription($login, $password, $firstname, $lastname, $mail, $phone, $address, $ville, $codePostal, $pays, $newsletter, $admin) {
         try {                       
-=======
-    public function inscription($login, $password, $firstname, $lastname, $mail, $phone, $address, $codePostal, $pays, $newsletter, $admin) {
-        try { 
->>>>>>> origin/master
             $data = array(
                 'pseudonyme' => $login,
                 'password' => $password,

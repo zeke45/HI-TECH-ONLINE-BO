@@ -11,7 +11,6 @@ class ProductController extends Zend_Controller_Action
 
     public function indexAction()
     {
-<<<<<<< HEAD
         $table = new Core_Model_Product();
 
         /*Declaration des champs qui seront affichés lors du listing*/
@@ -46,22 +45,6 @@ class ProductController extends Zend_Controller_Action
             $stock = $_POST['stock'];
             $codeProduit = $_POST['codeProduitGenerique'];
             $categorie = $_POST['idProduitCategorie'];
-=======
-        if ($this->_getParam('type') == 'create') 
-        {
-            $nom = $_POST['nomProduit'];
-            $nom = $_POST['categorie'];
-            
-            $stat = $user->inscription($nom);
-            $this->_redirect($this->view->url(array('controller' => 'product', 'action' => 'index'), null, true));
-            if ($stat != -1) {
-                echo "Le produit n'a pu s'ajouter";
-            } else {
-                echo "Un problème a surgit lors de l'inscription";
-            }
-        }
-    }
->>>>>>> origin/master
 
             
             $stat = $user->ajoutProduit($nomProduit, $prixUnitaire, $stock, $codeProduit, $categorie);

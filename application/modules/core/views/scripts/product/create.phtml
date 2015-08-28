@@ -1,17 +1,14 @@
 <h1 class="page-header">
     Creation d'un produit
 </h1>
-<<<<<<< HEAD
+
 <form action="<?php echo $this->url(array('controller' => 'product', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="POST">
-=======
-<form action="<?php echo $this->url(array('controller' => 'product', 'action' => 'index' ,'type' => 'create'),null,true); ?>" method="get">
->>>>>>> origin/master
+
     <div class="col-md-7">
         <ul>
             
             <li class="form-group col-md-12">
                 Nom du produit :
-<<<<<<< HEAD
                 <input type="text" class="pull-right col-md-7" name="nom" />
             </li>
 
@@ -28,38 +25,25 @@
             <li class="form-group col-md-12">
                 Code Générique du produit :
                 <input type="text" class="pull-right col-md-7" name="codeProduitGenerique" />
-=======
-                <input type="text" class="pull-right col-md-7" name="nomProduit" />
->>>>>>> origin/master
             </li>
             
             <li class="form-group col-md-12">
                 Catégorie :
-<<<<<<< HEAD
                 <select class="pull-right col-md-7 " name="idProduitCategorie">
-                    <option>-- Choisissez une catégorie --</option>
+                    <option>-- Choisissez une sous-catégorie --</option>
                     <?php 
-                        $categories = new Core_Model_Category();
+                        $categories = new Core_Model_SubCategory();
          
-                        foreach($categories->indexCategories() as $category){
+                        foreach($categories->indexSubCategories() as $category){
                             echo "<option value=".$category['id'].">".$category['nomCategorie']."</option>";
                         }
                     ?>
-                </input>
+                </select>
             </li>
             
            
             <li class="form-group col-md-12 submit">
                 <input type="submit" class="pull-right col-md-4"/>
-=======
-                <input type="select" class="pull-right col-md-7" name="categorie" />
-                    <?php echo $this->url(array('controller' => 'categorie', 'action' => 'listSelect'), null, true); ?>
-                <input>
-            </li>
-           
-            <li class="form-group col-md-12">
-                <input type="submit" class="pull-right col-md-3"/>
->>>>>>> origin/master
             </li>
             
         </ul>
